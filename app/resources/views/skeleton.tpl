@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="{$__charset__}">
 		<title>🔥Is het al 19:31?🔥</title>
+		{block head}
+		{/block}
 	</head>
 	<body>
-		<div>
-			<p>Het is nu {$tijd}!</p>
-		</div>
+		{block body}
+		{/block}
 	</body>
 </html>
