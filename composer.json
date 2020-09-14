@@ -17,12 +17,14 @@
     ],
     "autoload": {
         "psr-4": {
-            "app\\": "app"
+            "app\\": "app",
+            "lucifer\\": "app\\resources\\helpers"
         }
     },
     "require": {
         "php": ">=7.2.0",
-        "mako/framework": "6.3.*"
+        "mako/framework": "6.3.*",
+        "bertptrs/marty": "^6.0"
     },
     "require-dev": {
         "phpro/grumphp": "^0.14.1",
