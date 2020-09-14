@@ -51,7 +51,7 @@ return
      *
      * Default application language and locale.
      */
-    'default_language' => ['strings' => 'en_US', 'locale' => [LC_ALL => ['en_US.UTF-8', 'en_US.utf8', 'C.UTF-8', 'C'], LC_NUMERIC => 'C']],
+    'default_language' => ['strings' => 'nl_NL', 'locale' => [LC_ALL => ['nl_NL.UTF-8', 'nl_NL.utf8', 'C.UTF-8', 'C'], LC_NUMERIC => 'C']],
 
     /*
      * ---------------------------------------------------------
