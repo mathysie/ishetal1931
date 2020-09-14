@@ -15,4 +15,9 @@ class DateTime extends \DateTime
     {
         return $this->format('G:i');
     }
+
+    public function Is1931(): bool
+    {
+        return '19:31' == $this;
+    }
 }

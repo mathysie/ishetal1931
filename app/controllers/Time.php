@@ -9,10 +9,17 @@ use mako\http\routing\Controller;
 
 class Time extends Controller
 {
-    public function ViewTime(): string
+    public function ViewTime(?string $test = null): string
     {
         $dateTime = new DateTime();
+        if (!is_null($test)) {
+            $dateTime->setTime(19, 31);
+        }
 
-        return $this->view->render('time.time', ['tijd' => $dateTime]);
+        if ($dateTime->Is1931()) {
+            return $this->view->render('time.ja', ['tijd' => $dateTime]);
+        } else {
+            return $this->view->render('time.nee', ['tijd' => $dateTime]);
+        }
     }
 }
