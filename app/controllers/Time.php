@@ -16,10 +16,27 @@ class Time extends Controller
             $dateTime->setTime(19, 31);
         }
 
+        $picture = $this->GetRandomPicture($dateTime->Is1931());
+
         if ($dateTime->Is1931()) {
             return $this->view->render('time.ja', ['tijd' => $dateTime]);
         } else {
             return $this->view->render('time.nee', ['tijd' => $dateTime]);
         }
+    }
+
+    protected function GetRandomPicture(bool $is1931): string
+    {
+        $path = WEBROOT . '/assets/img';
+        $path .= $is1931 ? '/ja' : '/nee';
+
+        $filesystemIterator = new \FilesystemIterator($path, \FilesystemIterator::KEY_AS_FILENAME | \FilesystemIterator::SKIP_DOTS);
+        $location = random_int(0, iterator_count($filesystemIterator));
+        $filesystemIterator->rewind();
+        for ($i = 0; $i < $location; ++$i) {
+            $filesystemIterator->next();
+        }
+
+        return $filesystemIterator->key();
     }
 }
