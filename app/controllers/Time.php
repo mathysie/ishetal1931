@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace app\controllers;
 
 use lucifer\DateTime;
+use lucifer\FileIterator;
 use mako\http\routing\Controller;
 
 class Time extends Controller
@@ -31,13 +32,10 @@ class Time extends Controller
         $path = WEBROOT . '/assets/img';
         $path .= $is1931 ? '/ja' : '/nee';
 
-        $filesystemIterator = new \FilesystemIterator($path, \FilesystemIterator::KEY_AS_FILENAME | \FilesystemIterator::SKIP_DOTS);
-        $location = random_int(0, iterator_count($filesystemIterator));
-        $filesystemIterator->rewind();
-        for ($i = 0; $i < $location; ++$i) {
-            $filesystemIterator->next();
-        }
+        $fileIterator = new FileIterator($path);
+        $location = random_int(0, iterator_count($fileIterator) - 1);
+        $fileIterator->seek($location);
 
-        return $filesystemIterator->key();
+        return $fileIterator->key();
     }
 }
