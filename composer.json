@@ -24,7 +24,9 @@
     "require": {
         "php": ">=7.2.0",
         "mako/framework": "6.3.*",
-        "bertptrs/marty": "^6.0"
+        "bertptrs/marty": "^6.0",
+        "twbs/bootstrap": "^4.5",
+        "components/jquery": "^3.5"
     },
     "require-dev": {
         "phpro/grumphp": "^0.14.1",
@@ -46,6 +48,15 @@
     "scripts": {
         "post-create-project-cmd": [
             "php app/reactor app.generate_secret"
+        ],
+        "post-update-cmd":  [
+            "ln -fs ../../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css public/assets/css/bootstrap.min.css",
+            "ln -fs ../../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css.map public/assets/css/bootstrap.min.css.map",
+            "",
+            "ln -fs ../../../vendor/components/jquery/jquery.slim.min.js public/assets/js/jquery.slim.min.js",
+            "ln -fs ../../../vendor/components/jquery/jquery.slim.min.map public/assets/js/jquery.slim.min.map",
+            "ln -fs ../../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js public/assets/js/bootstrap.bundle.min.js",
+            "ln -fs ../../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map public/assets/js/bootstrap.bundle.min.js.map"
         ]
     }
 }
