@@ -17,11 +17,12 @@ class Time extends Controller
         }
 
         $picture = $this->GetRandomPicture($dateTime->Is1931());
+        $params = ['tijd' => $dateTime, 'picture' => $picture];
 
         if ($dateTime->Is1931()) {
-            return $this->view->render('time.ja', ['tijd' => $dateTime]);
+            return $this->view->render('time.ja', $params);
         } else {
-            return $this->view->render('time.nee', ['tijd' => $dateTime]);
+            return $this->view->render('time.nee', $params);
         }
     }
 
