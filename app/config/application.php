@@ -146,6 +146,7 @@ return
         'core' => [
         ],
         'web' => [
+            'marty\MartyPackage',
         ],
         'cli' => [
         ],
