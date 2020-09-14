@@ -4,9 +4,7 @@ parameters:
     tasks:
       composer: ~
       jsonlint: ~
-      phpcpd: ~
       phpcsfixer:
         config: '.php_cs'
       phplint: ~
-      phpmnd: ~
       yamllint: ~
