@@ -22,8 +22,8 @@
         }
     },
     "require": {
-        "php": ">=7.2.0",
-        "mako/framework": "6.3.*",
+        "php": ">=7.3.0",
+        "mako/framework": "7.0.*",
         "bertptrs/marty": "^6.0",
         "twbs/bootstrap": "^4.5",
         "components/jquery": "^3.5"
@@ -35,16 +35,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "extra": {
-        "branch-alias": {
-             "dev-master": "6.3-dev"
-        }
-    },
-    "suggest": {
-        "mako/repl": "A runtime developer console, interactive debugger and REPL for the Mako framework",
-        "mako/toolbar": "A debug toolbar for the Mako framework",
-        "mako/helpers": "A collection of helper functions"
-    },
     "scripts": {
         "post-create-project-cmd": [
             "php app/reactor app.generate_secret"
