@@ -29,9 +29,9 @@
         "components/jquery": "^3.5"
     },
     "require-dev": {
-        "phpro/grumphp": "^0.14.1",
-        "friendsofphp/php-cs-fixer": "^2.12",
-        "php-parallel-lint/php-parallel-lint": "^1.0"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpro/grumphp": "^0.22.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
