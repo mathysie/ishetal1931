@@ -16,6 +16,9 @@ $errorHandler->handle(HttpException::class, function (HttpException $ex) use ($c
         case 404:
             echo $container->get('view')->render('_error.404');
             break;
+        case 503:
+            echo $container->get('view')->render('_error.503');
+            break;
         default:
             echo $container->get('view')->render('_error.default', ['error' => $ex->getCode()]);
     }
