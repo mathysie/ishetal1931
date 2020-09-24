@@ -6,7 +6,7 @@
 
 		<title>🔥 Is het al 19:31? 🔥</title>
 		
-		<meta name="description" content="Is het al 19:31? Dat is de brandende vraag die iedereen heeft. Wees op tijd en vier het feest mee!"/>
+		<meta name="description" content="Is het al 19:31? Dat is de brandende vraag die iedereen heeft. Wees op tijd en vier het feestje mee!"/>
 		<meta property="og:title" content="🔥 Is het al 19:31? 🔥"/>
 		<meta property="og:url" content="http://www.ishetal1931.nl" />
 		<meta property="og:type" content="website" />
