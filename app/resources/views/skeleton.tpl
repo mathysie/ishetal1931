@@ -20,7 +20,7 @@
 		{/block}
 	</head>
 	<body>
-		<header></header>
+		<header class="container"></header>
 		<main class="container">
 			{block body}
 			{/block}
