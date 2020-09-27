@@ -26,7 +26,8 @@
         "mako/framework": "7.0.*",
         "bertptrs/marty": "^6.0",
         "twbs/bootstrap": "^4.5",
-        "components/jquery": "^3.5"
+        "components/jquery": "^3.5",
+        "minishlink/web-push": "^6.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
