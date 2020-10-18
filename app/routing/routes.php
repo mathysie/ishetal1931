@@ -13,7 +13,7 @@ $routes->group(
         ],
     function (Routes $routes): void {
         $routes->get('/', 'Time::ViewTime');
-        $routes->get('/{test}', 'Time::ViewTime');
+        $routes->get('/test/{test}?', 'Time::ViewTime');
 
         $routes->post('/webpush', 'WebPush::CreateSubscription', 'webpush.create');
     }
