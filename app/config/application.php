@@ -110,7 +110,7 @@ return
             mako\application\services\LoggerService::class,
             mako\application\services\ViewFactoryService::class,
             //mako\application\services\SessionService::class,
-            //mako\application\services\DatabaseService::class,
+            mako\application\services\DatabaseService::class,
             //mako\application\services\RedisService::class,
             //mako\application\services\I18nService::class,
             //mako\application\services\HumanizerService::class,
@@ -214,11 +214,19 @@ return
 
     /*
      * ---------------------------------------------------------
-     * Class aliases
+     * Logger
      * ---------------------------------------------------------
      *
-     * The key is the alias and the value is the actual class.
+     * channel: Log channel name
+     * handler: Log handler(s) to use. The avaiable options out of the box are 'ErrorLog', 'Stream' and 'Syslog'.
+     * syslog : Syslog specific options (https://linux.die.net/man/3/syslog).
      */
-    'class_aliases' => [
+    'logger' => [
+        'channel' => 'mako',
+        'handler' => ['Stream'],
+        'syslog'  => [
+            'identifier' => 'Mako',
+            'facility'   => LOG_USER,
+        ],
     ],
 ];

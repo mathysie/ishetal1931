@@ -2,6 +2,9 @@ COMPOSER=composer
 
 RM=rm -rf
 
+DB=app/storage/database/database.db
+SQLITE=sqlite
+
 REACTOR=php app/reactor
 
 PORT=8000
@@ -24,3 +27,7 @@ server: all
 
 server-public: all
 	$(REACTOR) server --port=$(PORT) --address=0.0.0.0
+
+$(DB) newdb: meta/database/schema.sql
+	@$(RM) $(DB)
+	cat $^ | $(SQLITE) $(DB)

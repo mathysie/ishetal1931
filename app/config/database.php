@@ -11,7 +11,7 @@ return
      *
      * Default configuration to use.
      */
-    'default' => 'test',
+    'default' => 'sqlite',
 
     /*
      * ---------------------------------------------------------
@@ -43,12 +43,7 @@ return
         ],
 
         'sqlite' => [
-            'dsn'         => 'sqlite:' . MAKO_APPLICATION_PATH . '/storage/database/test.sqlite',
-            'log_queries' => false,
-            'reconnect'   => false,
-            'queries'     => [
-                "PRAGMA encoding = 'UTF-8'",
-            ],
+            'dsn'         => 'sqlite:' . MAKO_APPLICATION_PATH . '/storage/database/database.db',
         ],
     ],
 ];
