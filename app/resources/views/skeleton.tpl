@@ -22,6 +22,8 @@
 		{block script}
 		<script src="assets/js/jquery.slim.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+		<script src="/assets/js/webpush.js"></script>
 		{/block}
 
 		<link rel="icon" href="assets/img/favicon/logo.png" />
